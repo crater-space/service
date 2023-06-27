@@ -1,0 +1,29 @@
+{
+  "name": "crater-services",
+  "version": "0.1.0",
+  "description": "A web service to generate package-management shell scripts using Crater DB",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon starter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:crater-space/service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/crater-space/service/issues"
+  },
+  "homepage": "https://github.com/crater-space/service#readme",
+  "keywords": [
+    "UNIX",
+    "Linux",
+    "Crater"
+  ],
+  "author": "Mohammed Ismail Ansari <team.terminal@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.16.4",
+    "nodemon": "2.0.4"
+  }
+}
