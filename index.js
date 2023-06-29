@@ -2,6 +2,8 @@
 
 const express = require('express');
 
+const { COMMANDS, executeCommand } = require('./lib');
+
 module.exports = url => {
     const app = express();
 
@@ -15,7 +17,7 @@ module.exports = url => {
     app.get(
         '/list-sources',
         (_, res) => {
-            res.send('sources');
+            executeCommand(COMMANDS.LIST_SOURCES, res);
         }
     );
 
