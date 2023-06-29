@@ -1,8 +1,9 @@
-/* global module require */
+/* global require module __dirname */
 
+const { join } = require('path');
 const { spawn } = require('child_process');
 
-const commandPrefix = 'sbcl --script ./db-reader/main.lisp';
+const commandPrefix = 'sbcl --script ./main.lisp';
 
 module.exports.COMMANDS = {
     LIST_SOURCES: `${commandPrefix} get_sources`,
@@ -21,7 +22,7 @@ module.exports.executeCommand = (command, responseObject) => {
     const currentCommandInstance = spawn(
         commandName,
         commandArgs,
-        { cwd: './', shell: true }
+        { cwd: join(__dirname, './db-reader'), shell: true }
     );
 
     currentCommandInstance.stdout.on(
