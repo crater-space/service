@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/github/license/crater-space/service.svg)](https://opensource.org/licenses/MIT)  
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y5E5GL7)
 
-A web service to generate package-management shell scripts using [Crater Service](https://github.com/crater-space/service), based on information in [Crater DB](https://github.com/crater/db)
+A web service to generate package-management shell scripts using [Crater Service](https://github.com/crater-space/service), based on information in [Crater DB](https://github.com/crater-space/db)
 
 ## Interface
 
