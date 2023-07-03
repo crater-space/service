@@ -31,9 +31,8 @@ module.exports = url => {
 
     app.get(
         '/list',
-        (_, res) => {
-            // TODO: Implement endpoint
-            res.send('list');
+        ({ query }, res) => {
+            executeCommand(`${COMMANDS.LIST} ${query.s}`, res);
         }
     );
 
