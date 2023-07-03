@@ -24,6 +24,7 @@ module.exports = url => {
     app.get(
         '/search',
         ({ query }, res) => {
+            // TODO: Implement endpoint
             res.send(JSON.stringify({ search: query }));
         }
     );
@@ -31,6 +32,7 @@ module.exports = url => {
     app.get(
         '/list',
         (_, res) => {
+            // TODO: Implement endpoint
             res.send('list');
         }
     );
@@ -38,6 +40,7 @@ module.exports = url => {
     app.get(
         '/install',
         ({ query }, res) => {
+            // TODO: Implement endpoint
             res.send(JSON.stringify({ install: query }));
         }
     );
@@ -45,6 +48,7 @@ module.exports = url => {
     app.get(
         '/uninstall',
         ({ query }, res) => {
+            // TODO: Implement endpoint
             res.send(JSON.stringify({ uninstall: query }));
         }
     );
@@ -52,6 +56,7 @@ module.exports = url => {
     app.get(
         '/update',
         ({ query }, res) => {
+            // TODO: Implement endpoint
             res.send(JSON.stringify({ update: query }));
         }
     );
