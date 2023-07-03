@@ -25,7 +25,7 @@ module.exports = url => {
         '/search',
         ({ query }, res) => {
             // TODO: Implement endpoint
-            res.send(JSON.stringify({ search: query }));
+            res.send("echo \"Search not Implemented!\"");
         }
     );
 
@@ -40,7 +40,7 @@ module.exports = url => {
         '/install',
         ({ query }, res) => {
             // TODO: Implement endpoint
-            res.send(JSON.stringify({ install: query }));
+            res.send("echo \"Install not Implemented!\"");
         }
     );
 
@@ -48,7 +48,7 @@ module.exports = url => {
         '/uninstall',
         ({ query }, res) => {
             // TODO: Implement endpoint
-            res.send(JSON.stringify({ uninstall: query }));
+            res.send("echo \"Uninstall not Implemented!\"");
         }
     );
 
@@ -56,7 +56,7 @@ module.exports = url => {
         '/update',
         ({ query }, res) => {
             // TODO: Implement endpoint
-            res.send(JSON.stringify({ update: query }));
+            res.send("echo \"Update not Implemented!\"");
         }
     );
 };
