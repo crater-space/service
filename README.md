@@ -19,6 +19,10 @@ All the below service endpoints accept GET requests:
 5. `uninstall` generates a Bash script to uninstall the specified packages from the system
 6. `update` generates a Bash script to update all (or specified) packages using the appropriate available known sources
 
+An extra endpoint has been configured to generate a script to install the [cli](https://github.com/crater-space/cli).
+
+    `cli` returns a Bash script to install the cli.
+
 ### Web portal
 
 Hitting the URL in the browser displays basic information about the service endpoints (coming soon).
