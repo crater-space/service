@@ -25,19 +25,26 @@ module.exports.executeCommand = (command, responseObject) => {
         { cwd: join(__dirname, './db-reader'), shell: true }
     );
 
+    responseObject.contentType('text/plain');
+
     currentCommandInstance.stdout.on(
         'data',
         data => {
-            responseObject.contentType('text/plain');
-            responseObject.send(data.toString());
+            responseObject.write(data.toString());
         }
     );
 
     currentCommandInstance.stderr.on(
         'data',
         data => {
-            responseObject.contentType('text/plain');
-            responseObject.send(data.toString());
+            responseObject.write(data.toString());
+        }
+    );
+
+    currentCommandInstance.on(
+        'close',
+        () => {
+            responseObject.end();
         }
     );
 };
