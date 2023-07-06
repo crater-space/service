@@ -1,6 +1,7 @@
 /* global module require */
 
 const express = require('express');
+const axios = require('axios');
 
 const { COMMANDS, executeCommand } = require('./lib');
 
@@ -11,6 +12,20 @@ module.exports = url => {
         url,
         () => {
             console.log('Crater service started on', url);
+        }
+    );
+
+    app.get(
+        '/cli',
+        (_, res) => {
+            axios
+                .get('https://raw.githubusercontent.com/crater-space/cli/main/install')
+                .then(
+                    ({ data }) => {
+                        res.contentType('text/plain');
+                        res.send(data);
+                    }
+                );
         }
     );
 
@@ -39,8 +54,7 @@ module.exports = url => {
     app.get(
         '/install',
         ({ query }, res) => {
-            // TODO: Implement endpoint
-            res.send("echo \"Install not Implemented!\"");
+            executeCommand(`${COMMANDS.INSTALL} ${query.s} ${query.p}`, res);
         }
     );
 
