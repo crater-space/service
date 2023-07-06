@@ -39,8 +39,7 @@ module.exports = url => {
     app.get(
         '/search',
         ({ query }, res) => {
-            // TODO: Implement endpoint
-            res.send("echo \"Search not Implemented!\"");
+            executeCommand(`${COMMANDS.SEARCH} ${query.s}  ${query.t}`, res);
         }
     );
 
@@ -61,16 +60,14 @@ module.exports = url => {
     app.get(
         '/uninstall',
         ({ query }, res) => {
-            // TODO: Implement endpoint
-            res.send("echo \"Uninstall not Implemented!\"");
+            executeCommand(`${COMMANDS.UNINSTALL} ${query.s}  ${query.p}`, res);
         }
     );
 
     app.get(
         '/update',
         ({ query }, res) => {
-            // TODO: Implement endpoint
-            res.send("echo \"Update not Implemented!\"");
+            executeCommand(`${COMMANDS.UPDATE} ${query.s}  ${query.p}`, res);
         }
     );
 };
