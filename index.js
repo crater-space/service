@@ -53,7 +53,7 @@ module.exports = url => {
     app.get(
         '/search',
         ({ query }, res) => {
-            executeCommand(`${COMMANDS.SEARCH} ${query.s}  ${query.t}`, res);
+            executeCommand(`${COMMANDS.SEARCH} ${query.s} ${query.t}`, res);
         }
     );
 
@@ -74,14 +74,14 @@ module.exports = url => {
     app.get(
         '/uninstall',
         ({ query }, res) => {
-            executeCommand(`${COMMANDS.UNINSTALL} ${query.s}  ${query.p}`, res);
+            executeCommand(`${COMMANDS.UNINSTALL} ${query.s} ${query.p}`, res);
         }
     );
 
     app.get(
         '/update',
         ({ query }, res) => {
-            executeCommand(`${COMMANDS.UPDATE} ${query.s}  ${query.p}`, res);
+            executeCommand(`${COMMANDS.UPDATE} ${query.s} ${query.p}`, res);
         }
     );
 };
