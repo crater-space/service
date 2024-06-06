@@ -30,6 +30,20 @@ module.exports = url => {
     );
 
     app.get(
+        '/fetch',
+        (_, res) => {
+            axios
+                .get('https://raw.githubusercontent.com/crater-space/cli/main/fetch')
+                .then(
+                    ({ data }) => {
+                        res.contentType('text/plain');
+                        res.send(data);
+                    }
+                );
+        }
+    );
+
+    app.get(
         '/list-sources',
         (_, res) => {
             executeCommand(COMMANDS.LIST_SOURCES, res);
